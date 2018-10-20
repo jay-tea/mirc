@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<script type="text/javascript">
+function CountCode(){
+document.getElementById('codesize').innerHTML='<h1>'+document.getElementById('code').value.replace(/^\s*(?:\/\*(?!\*\/)[\s\S]*\*\/|;.*)?|\s*\r?\n?$/mg,'').replace(/\r?\n?/g,'').length+' bytes</h1>';
+setTimeout(CountCode,600);
+}
+setTimeout(CountCode,0);
+</script>
+</head>
+
+<body>
+<form action="#">
+<textarea id="code" rows="20" cols="60">
+</textarea>
+</form>
+<div id="codesize">
+<h1>0 bytes</h1>
+</div>
+(Originally hosted at http://bytecount.bluebus112.com/)
+</body>
+
+</html>
