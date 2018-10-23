@@ -5,7 +5,7 @@
 <title>Title of the document</title>
 <script type="text/javascript">
 function CountCode(){
-document.getElementById('codesize').innerHTML='<h1>'+document.getElementById('code').value.replace(/^\s*(?:\/\*(?!\*\/)[\s\S]*\*\/|;.*)?|\s*\r?\n?$/mg,'').replace(/\r?\n?/g,'').length+' bytes</h1>';
+document.getElementById('codesize').innerHTML='<h1>'+document.getElementById('code').value.replace(/^\s*|\s*\r?\n?$/mg,'').replace(/\r?\n?/g,'').length+' bytes</h1>';
 setTimeout(CountCode,600);
 }
 setTimeout(CountCode,0);
